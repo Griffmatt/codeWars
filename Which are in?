@@ -1,0 +1,8 @@
+function inArray(array1,array2){
+  let a =[]
+  for(const w of array1){
+    for(const x of array2){
+    if(x.includes(w) && !a.includes(w)){a.push(w)}}
+  }
+  return a.sort()
+}
