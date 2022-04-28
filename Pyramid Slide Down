@@ -1,0 +1,13 @@
+function longestSlideDown (pyramid) {
+  
+  let arr = pyramid[pyramid.length-1]
+   for(i = pyramid.length-2; i >=0; i--){
+     let arr2 = []
+     for(j = 0; j<arr.length-1; j++){
+      
+       arr2.push(pyramid[i][j]+Math.max(arr[j], arr[j+1]))
+     }
+     arr = arr2
+   }
+  return arr[0]
+}
