@@ -1,0 +1,8 @@
+function findMissingLetter(array)
+{
+  let abc = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+  
+  for(i=0; i<array.length; i++){
+    if(abc[abc.indexOf(array[i])+1] !== array[i+1]) return abc[abc.indexOf(array[i])+1]
+  }
+}
