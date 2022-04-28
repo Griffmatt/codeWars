@@ -1,0 +1,10 @@
+function expandedForm(num) {
+  let equal = []
+  let snum = num.toString()
+  for(i = 0; i < snum.length; i++){
+    if(snum[i]> 0){
+      equal.push(snum[i]*(Math.pow(10, (snum.length-1-i))))
+    }
+  }
+  return equal.join(" + ")
+}
