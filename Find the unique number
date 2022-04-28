@@ -1,0 +1,17 @@
+function findUniq(arr) {
+  let a =[]
+  let b = []
+  for(i = 0; i<arr.length; i++){
+    if (i===0){
+      a.push(arr[i])
+      continue
+    }
+    if(arr[i] === a[0]){
+      a.push(arr[i])
+      continue
+    }
+    b.push(arr[i])
+  }
+  if(a.length === 1) return a[0]
+  if(b.length === 1) return b[0]
+}
