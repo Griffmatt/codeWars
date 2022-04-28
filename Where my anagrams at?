@@ -1,0 +1,10 @@
+function anagrams(word, words) {
+  let wordarr = word.split("").sort().join("")
+  let ag = []
+  for(const w of words){
+    if(w.split("").sort().join("") === wordarr){
+      ag.push(w)
+    }
+  }
+  return ag
+}
