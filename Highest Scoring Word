@@ -1,0 +1,16 @@
+function high(x){
+let arr = x.split(" ")
+let highest =""
+let high = 0
+for(const word of arr){
+  let score = 0 
+  for(const letter of word){
+    score += letter.charCodeAt()-96
+  }
+  if(score > high){
+    high = score;
+    highest = word
+  }
+}
+  return highest
+}
