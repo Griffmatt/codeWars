@@ -1,0 +1,16 @@
+function listSquared(m, n) {
+  let arr =[]
+    for(i=m; i <=n; i++){
+      let div = []
+      for(x=1; x <= i; x++){
+        if(i/x % 1 === 0){
+          div.push(x)
+        }
+      }
+      div = div.map(x => x*x).reduce((a,b) => a+b)
+      if(Math.sqrt(div) % 1 === 0){
+        arr.push([i, div])
+      }
+    }
+  return arr
+}
