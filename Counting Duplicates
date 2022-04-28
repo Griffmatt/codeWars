@@ -1,0 +1,12 @@
+function duplicateCount(text){
+  let letters = []
+  let dupletters =[]
+  for(const letter of text.toLowerCase()){
+    if(letters.includes(letter)){
+      if(dupletters.includes(letter)) continue
+      dupletters.push(letter)
+      continue}
+    letters.push(letter)
+  }
+  return dupletters.length
+}
