@@ -1,0 +1,10 @@
+function persistence(num) {
+  num = num.toString().split("").map(n => parseInt(n))
+  let i = 0
+  if(num.length === 1) return 0
+   do{
+     num = num.reduce((a, b) => a*b).toString().split("").map(n => parseInt(n))
+     i++
+   } while(num.length > 1);
+  return i
+}
