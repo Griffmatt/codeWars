@@ -1,0 +1,13 @@
+function findEvenIndex(arr)
+{
+  for(i=0; i < arr.length; i++){
+    let right = arr.slice(i+1)
+    let lt = 0
+    let rt = 0
+    
+    right.forEach(n =>{rt = rt+n})
+    arr.forEach((n, index) =>{if( index < i){lt = lt+n}})
+     if(rt===lt) return i
+  }
+  return -1
+}
