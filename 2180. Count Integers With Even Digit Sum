@@ -1,0 +1,10 @@
+var countEven = function(num) {
+    let sum = 0;
+    let hold = num;
+    
+    while(num > 0){
+        sum += num % 10;
+        num = Math.floor(num / 10)
+    }
+    return sum % 2 ? Math.floor((hold - 1) / 2) : Math.floor(hold / 2)
+};
