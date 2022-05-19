@@ -1,0 +1,30 @@
+var intToRoman = function(num) {
+    let answer = ""
+    let letters = [["M", "C", "X", "I"], ["CM", "XC", "IX"], ["D", "L", "V"], ["CD", "XL", "IV"]]
+    let divisor = 1
+    let i = 0
+
+    while(num > 0){
+        while(num >= 1000/divisor){
+            num -= 1000/divisor
+            answer= `${answer}${letters[0][i]}`
+        }
+        if(num >= 900/divisor){
+            num -= 900/divisor
+            answer= `${answer}${letters[1][i]}`
+        }
+        if(num >= 500/divisor){
+             num -= 500/divisor
+            answer= `${answer}${letters[2][i]}`
+        }
+    if(num >= 400/divisor){
+        num -= 400/divisor
+            answer= `${answer}${letters[3][i]}`
+    }
+        
+        divisor *= 10
+        i++
+}
+    
+    return answer
+};
